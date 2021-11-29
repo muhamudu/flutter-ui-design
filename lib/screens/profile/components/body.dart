@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shop_app/screens/help_center/help_center_screen.dart';
 import 'package:shop_app/screens/notifications/notification_screen.dart';
 import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
+import 'package:shop_app/screens/wallet/wallet.dart';
 
 import 'profile_menu.dart';
 import 'profile_pic.dart';
@@ -30,7 +31,9 @@ class Body extends StatelessWidget {
           ProfileMenu(
             text: "My Wallet",
             icon: "assets/icons/wallet.svg",
-            press: () {},
+            press: () {
+              Navigator.pushNamed(context, Wallet.routeName);
+            },
           ),
           ProfileMenu(
             text: "Help Center",

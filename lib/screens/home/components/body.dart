@@ -4,7 +4,7 @@ import '../../../size_config.dart';
 import 'categories.dart';
 import 'discount_banner.dart';
 import 'home_header.dart';
-import 'popular_product.dart';
+import 'popular_service.dart';
 import 'special_offers.dart';
 
 class Body extends StatelessWidget {

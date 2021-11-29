@@ -9,8 +9,8 @@ import 'dart:convert';
 
 class Body extends StatelessWidget {
   Future<List<Category>> _getCategories() async {
-    var data = await http
-        .get(Uri.parse("https://api.bits.rw/backend/category.json"));
+    var data =
+        await http.get(Uri.parse("https://api.bits.rw/backend/category.json"));
 
     var jsonData = json.decode(data.body);
     List<Category> categories = [];
@@ -82,7 +82,7 @@ class Body extends StatelessWidget {
 
 class Category {
   final int id;
-  final int admin_id;
+  final String admin_id;
   final String category_name;
 
   Category(this.id, this.admin_id, this.category_name);

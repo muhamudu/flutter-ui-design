@@ -12,6 +12,8 @@ import 'package:shop_app/screens/otp/otp_screen.dart';
 import 'package:shop_app/screens/profile/profile_screen.dart';
 import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
 import 'package:shop_app/screens/splash/splash_screen.dart';
+import 'package:shop_app/screens/sub_service_list/sub_service_list.dart';
+import 'package:shop_app/screens/wallet/wallet.dart';
 
 import 'screens/sign_up/sign_up_screen.dart';
 
@@ -31,4 +33,6 @@ final Map<String, WidgetBuilder> routes = {
   ProfileScreen.routeName: (context) => ProfileScreen(),
   HelpCenter.routeName: (context) => HelpCenter(),
   Notifications.routeName: (context) => Notifications(),
+  SubServiceList.routeName: (context) => SubServiceList(),
+  Wallet.routeName: (context) => Wallet(),
 };

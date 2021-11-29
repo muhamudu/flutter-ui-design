@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/screens/sub_service_list/sub_service_list.dart';
 
 import '../../../size_config.dart';
 
@@ -25,10 +26,14 @@ class SectionTitle extends StatelessWidget {
           ),
         ),
         GestureDetector(
-          onTap: press,
+          onTap: () {
+            Navigator.pushNamed(context, SubServiceList.routeName);
+          },
           child: Text(
             "See More",
-            style: TextStyle(color: Color(0xFFBBBBBB)),
+            style: TextStyle(
+              color: Color(0xFFBBBBBB),
+            ),
           ),
         ),
       ],
