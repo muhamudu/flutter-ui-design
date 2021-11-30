@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/screens/edit_profile/edit_profile.dart';
 import 'package:shop_app/screens/help_center/help_center_screen.dart';
 import 'package:shop_app/screens/notifications/notification_screen.dart';
 import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
@@ -19,7 +20,9 @@ class Body extends StatelessWidget {
           ProfileMenu(
             text: "My Account",
             icon: "assets/icons/User Icon.svg",
-            press: () => {},
+            press: () {
+              Navigator.pushNamed(context, EditProfileScreen.routeName);
+            },
           ),
           ProfileMenu(
             text: "Notifications",

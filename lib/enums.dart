@@ -7,4 +7,6 @@ enum MenuState {
   notification,
   sub_service_list,
   wallet,
+  deposite,
+  edit_profile,
 }
