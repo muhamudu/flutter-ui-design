@@ -9,7 +9,12 @@ class EditProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(
+          "Edit Profile",
+          style: TextStyle(color: Colors.black),
+        ),
+      ),
       body: Body(),
       // bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.profile),
     );

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shop_app/screens/category/category.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
+import 'package:shop_app/screens/maps/map.dart';
 import 'package:shop_app/screens/profile/profile_screen.dart';
 
 import '../constants.dart';
@@ -60,8 +61,15 @@ class CustomBottomNavBar extends StatelessWidget {
                     Navigator.pushNamed(context, Category.routeName),
               ),
               IconButton(
-                icon: SvgPicture.asset("assets/icons/Location point.svg"),
-                onPressed: () {},
+                icon: SvgPicture.asset(
+                  "assets/icons/Location point.svg",
+                  color: MenuState.map == selectedMenu
+                      ? kPrimaryColor
+                      : inActiveIconColor,
+                ),
+                onPressed: () => {
+                  Navigator.pushNamed(context, MapScreen.routeName),
+                },
               ),
               IconButton(
                 icon: SvgPicture.asset(

@@ -8,6 +8,7 @@ import 'package:shop_app/screens/forgot_password/forgot_password_screen.dart';
 import 'package:shop_app/screens/help_center/help_center_screen.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
 import 'package:shop_app/screens/login_success/login_success_screen.dart';
+import 'package:shop_app/screens/maps/map.dart';
 import 'package:shop_app/screens/notifications/notification_screen.dart';
 import 'package:shop_app/screens/otp/otp_screen.dart';
 import 'package:shop_app/screens/profile/profile_screen.dart';
@@ -32,11 +33,13 @@ final Map<String, WidgetBuilder> routes = {
   HomeScreen.routeName: (context) => HomeScreen(),
   Category.routeName: (context) => Category(),
   CartScreen.routeName: (context) => CartScreen(),
+  DetailsScreen.routeName: (context) => DetailsScreen(),
   ProfileScreen.routeName: (context) => ProfileScreen(),
   HelpCenter.routeName: (context) => HelpCenter(),
   Notifications.routeName: (context) => Notifications(),
   SubServiceList.routeName: (context) => SubServiceList(),
   Wallet.routeName: (context) => Wallet(),
   DepositeForm.routeName: (context) => DepositeForm(),
-  EditProfileScreen.routeName: (context) => EditProfileScreen()
+  EditProfileScreen.routeName: (context) => EditProfileScreen(),
+  MapScreen.routeName: (context) => MapScreen(),
 };

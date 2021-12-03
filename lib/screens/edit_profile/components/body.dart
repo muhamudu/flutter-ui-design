@@ -1,38 +1,19 @@
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Setting UI",
-      home: EditProfilePage(),
-    );
-  }
-}
-
-class EditProfilePage extends StatefulWidget {
-  @override
-  _EditProfilePageState createState() => _EditProfilePageState();
-}
-
-class _EditProfilePageState extends State<EditProfilePage> {
   bool showPassword = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade100,
       body: Container(
-        padding: EdgeInsets.only(left: 16, top: 25, right: 16),
+        padding: EdgeInsets.only(left: 16, right: 16),
         child: GestureDetector(
           onTap: () {
             FocusScope.of(context).unfocus();
           },
           child: ListView(
             children: [
-              Text(
-                "Edit Profile",
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
-              ),
               SizedBox(
                 height: 15,
               ),
@@ -85,19 +66,21 @@ class _EditProfilePageState extends State<EditProfilePage> {
               SizedBox(
                 height: 35,
               ),
-              buildTextField("Full Name", "NDAYISHIMIYE Muhamudu", false),
+              buildTextField("First Name", "NDAYISHIMIYE", false),
+              buildTextField("Last Name", "Muhamudu", false),
               buildTextField("E-mail", "muhamudu@bits.rw", false),
+              buildTextField("Phone Number", "0780782835", false),
               buildTextField("Password", "********", true),
               buildTextField("Location", "Kigali - Nyarugenge", false),
               SizedBox(
-                height: 35,
+                height: 10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   RaisedButton(
                     onPressed: () {},
-                    color: Colors.green,
+                    color: Colors.orange.shade600,
                     padding: EdgeInsets.symmetric(horizontal: 50),
                     elevation: 2,
                     shape: RoundedRectangleBorder(
@@ -126,7 +109,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
       child: TextField(
         obscureText: isPasswordTextField ? showPassword : false,
         decoration: InputDecoration(
-            contentPadding: EdgeInsets.only(bottom: 3),
+            contentPadding: EdgeInsets.only(bottom: 3, left: 12, right: 12),
             labelText: labelText,
             floatingLabelBehavior: FloatingLabelBehavior.always,
             hintText: placeholder,

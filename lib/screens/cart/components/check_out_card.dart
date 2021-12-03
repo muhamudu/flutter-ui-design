@@ -5,10 +5,19 @@ import 'package:shop_app/components/default_button.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
-class CheckoutCard extends StatelessWidget {
+class CheckoutCard extends StatefulWidget {
   const CheckoutCard({
     Key? key,
   }) : super(key: key);
+
+  @override
+  State<CheckoutCard> createState() => _CheckoutCardState();
+}
+
+class _CheckoutCardState extends State<CheckoutCard> {
+  bool val = true;
+
+  String message = "Not Express";
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +87,34 @@ class CheckoutCard extends StatelessWidget {
                   width: getProportionateScreenWidth(190),
                   child: DefaultButton(
                     text: "Check Out",
-                    press: () {},
+                    press: () {
+                      showModalBottomSheet<void>(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return Container(
+                            height: 200,
+                            color: Colors.grey.shade200,
+                            child: Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  new Switch(
+                                      value: val,
+                                      onChanged: (bool e) => something(e),
+                                      activeColor: Colors.green),
+                                  new Text(message),
+                                  ElevatedButton(
+                                    child: Text('Proceed to Payment'),
+                                    onPressed: () {},
+                                  )
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                    },
                   ),
                 ),
               ],
@@ -87,5 +123,17 @@ class CheckoutCard extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void something(bool e) {
+    setState(() {
+      if (e) {
+        message = "Express";
+        val = true;
+      } else {
+        message = "Not Express";
+        val = false;
+      }
+    });
   }
 }

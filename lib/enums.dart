@@ -9,4 +9,6 @@ enum MenuState {
   wallet,
   deposite,
   edit_profile,
+  map,
+  details,
 }
