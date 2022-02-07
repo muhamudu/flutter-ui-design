@@ -76,9 +76,9 @@ class DepositeForm extends StatelessWidget {
         child: SafeArea(
             child: Column(
           children: [
-            Text("Register Account", style: headingStyle),
+            Text("Make Topup", style: headingStyle),
             Text(
-              "Complete your details or continue \nwith social media",
+              "Make topup using your MoMo \nPhone Number",
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 40.0),
@@ -104,7 +104,7 @@ class DepositeForm extends StatelessWidget {
             ),
             SizedBox(height: 30.0),
             DefaultButton(
-              text: "Deposit",
+              text: "TopUp",
               press: () {},
             ),
           ],

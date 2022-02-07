@@ -15,7 +15,7 @@ class Body extends StatelessWidget {
     var jsonData = json.decode(data.body);
     List<Category> categories = [];
     for (var c in jsonData) {
-      Category category = Category(c["id"], c["admin_id"], c["category_name"]);
+      Category category = Category(c["admin_id"], c["category_name"]);
       categories.add(category);
     }
     print(categories.length);
@@ -64,9 +64,9 @@ class Body extends StatelessWidget {
                 } else {
                   return ListView.builder(
                     itemCount: snapshot.data.length,
-                    itemBuilder: (BuildContext context, int id) {
+                    itemBuilder: (BuildContext context, int index) {
                       return ListTile(
-                        title: Text(snapshot.data[id].category_name),
+                        title: Text(snapshot.data[index].category_name),
                       );
                     },
                   );
@@ -81,9 +81,9 @@ class Body extends StatelessWidget {
 }
 
 class Category {
-  final int id;
+  // final int id;
   final String admin_id;
   final String category_name;
 
-  Category(this.id, this.admin_id, this.category_name);
+  Category(this.admin_id, this.category_name);
 }
